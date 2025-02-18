@@ -1,1 +1,281 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #333;
+  --secondary-color: #f4f4f4;
+  --text-color: #333;
+  --danger-color: #b42c2c;
+  --warning-color: #f0ad4e;
+  --success-color: #5cb85c;
+  --info-color: #2578c7;
+
+  --font-family: 'Roboto', sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2rem;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+
+  *, html, body {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: var(--secondary-color);
+  }
+
+  main {
+    margin-top: 0.125rem;
+    padding: var(--spacing);
+    background-color: red;
+  }
+
+  header, footer, main {
+    display: block;
+    width: 100%;
+  }
+
+  header {
+    color: #fff;
+    padding: var(--spacing);
+    margin: 0;
+    margin-bottom: auto;
+    text-align: center;
+    box-shadow: #747474 0 0 0.5rem;
+  }
+
+  footer {
+
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: var(--font-size-xxl);
+  }
+
+  h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  h4, h5, h6, p {
+    font-size: var(--font-size-md);
+  }
+
+  h5 {
+    font-weight: 600;
+  }
+
+  h6 {
+    font-weight: 500;
+  }
+
+  a, img {
+    display: inline-block;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:focus, button:focus {
+    outline: none;
+  }
+
+  ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing);
+    border: none;
+    border-radius: 0.25rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: var(--font-size-md);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #555;
+  }
+
+  .btn:focus,
+  .btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.5);
+  }
+
+  .btn--dark {
+    background-color: var(--primary-color);
+  }
+
+  .btn--dark:hover {
+    background-color: #555;
+  }
+
+  .btn--dark__outline {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+  }
+
+  .btn--dark__outline:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+
+  .btn--light {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+
+  .btn--light:hover {
+    background-color: #f0f0f0;
+  }
+
+  .btn--light__outline {
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+  }
+
+  .btn--light__outline:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+
+  .btn--primary {
+    background-color: var(--info-color);
+  }
+
+  .btn--primary:hover {
+    background-color: #1e6ec7;
+  }
+
+  .btn--primary__outline {
+    background-color: transparent;
+    border: 1px solid var(--info-color);
+    color: var(--info-color);
+  }
+
+  .btn--primary__outline:hover {
+    background-color: var(--info-color);
+    color: #fff;
+  }
+
+  .btn--secondary {
+    background-color: #747474;
+    color: var(--primary-color);
+  }
+
+  .btn--secondary:hover {
+    background-color: #646464;
+  }
+
+  .btn--secondary__outline {
+    background-color: transparent;
+    border: 1px solid #747474;
+    color: #747474;
+  }
+
+  .btn--secondary__outline:hover {
+    background-color: #646464;
+    color: #646464;
+  }
+
+  .btn--danger {
+    background-color: var(--danger-color);
+  }
+
+  .btn--danger:hover {
+    background-color: #a00;
+  }
+
+  .btn--danger__outline {
+    background-color: transparent;
+    border: 1px solid var(--danger-color);
+    color: var(--danger-color);
+  }
+
+  .btn--danger__outline:hover {
+    background-color: var(--danger-color);
+    color: #fff;
+  }
+
+  .btn--warning {
+    background-color: var(--warning-color);
+  }
+
+  .btn--warning:hover {
+    background-color: #f0a23e;
+  }
+
+  .btn--warning__outline {
+    background-color: transparent;
+    border: 1px solid var(--warning-color);
+    color: var(--warning-color);
+  }
+
+  .btn--warning__outline:hover {
+    background-color: var(--warning-color);
+    color: #fff;
+  }
+
+  .btn--success {
+    background-color: var(--success-color);
+  }
+
+  .btn--success:hover {
+    background-color: #4b8f4b;
+  }
+
+  .btn--success__outline {
+    background-color: transparent;
+    border: 1px solid var(--success-color);
+    color: var(--success-color);
+  }
+
+  .btn--success__outline:hover {
+    background-color: var(--success-color);
+    color: #fff;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1750px;
+    padding: 0.5rem;
+    margin: 0 auto;
+  }
+}

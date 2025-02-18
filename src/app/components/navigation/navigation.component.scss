@@ -1,0 +1,20 @@
+.header-wrapper, .nav-wrapper, nav, nav > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-wrapper, nav, nav > ul {
+  gap: 1rem;
+}
+
+.logo, li {
+  padding: 0.5rem 1rem;
+  border-radius: .25rem;
+  transition: all .25 ease;
+}
+
+li:hover, li:focus-within, .logo:focus-within {
+  box-shadow: inset -2px -2px 0px 0px rgba(37,120,199,0.5);
+  color: var(--info-color)
+}

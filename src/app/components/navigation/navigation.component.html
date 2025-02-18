@@ -1,0 +1,38 @@
+<header>
+  <div class="container header-wrapper">
+    <div class="logo">
+      <a routerLink="/home">
+        BP-Blog
+      </a>
+    </div>
+    <div class="nav-wrapper">
+      <nav class="flex flex-row justify-between items-center gap m-auto">
+        <ul class="flex flex-row justify-between items-center gap">
+          <li class="p">
+            <a
+              routerLink="/home"
+              class="navigation__link"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [style]="url.includes('/home') ? 'color: var(--info-color); font-weight: semi-bold;' : ''"
+            >
+              Home
+            </a>
+          </li>
+          <li class="p">
+            <a
+              routerLink="/posts"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [style]="url.includes('/posts') ? 'color: var(--info-color); font-weight: semi-bold;' : ''"
+            >
+              Posts
+            </a>
+          </li>
+        </ul>
+      </nav>
+      @if(user()){<app-avatar [user]="user"></app-avatar>}
+      @else{<a routerLink="/auth&mode=login" class="btn btn--primary__outline m-auto">Login</a>}
+    </div>
+  </div>
+</header>
